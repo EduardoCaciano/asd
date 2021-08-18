@@ -6,8 +6,9 @@ export const Container = styled.header`
    width : 100vw;
    position: fixed;
    height: 60px;
+   top: 0;
 
-   background-color: #FE0000;
+   background-color: var(--primary);
 
    display: flex;
    align-items: center;
@@ -31,12 +32,13 @@ export const Container = styled.header`
 
 export const IconSignOut = styled(FaSignOutAlt)`
    color: white;
-   margin-right: 10px;
+   margin-right: 25px;
    font-size: 25px;
    cursor: pointer;
 
    :hover{
-      transform: scale(1.5) rotate(180deg);
+      transform: scale(1.5)
+      /* rotate(180deg); */;
       transition: .2s;
    }
 `
