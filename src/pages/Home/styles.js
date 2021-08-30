@@ -1,7 +1,20 @@
 import styled from "styled-components";
 import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md"
 
 export const GistIcon = styled(FaGithub)`
+    font-size: 40px;
+    gap: 50px;
+
+    cursor: pointer;
+    transition: .2;
+
+    :hover{
+        color: var(--primary);
+    }
+`;
+export const EmailIcon = styled(MdEmail)`
     font-size: 40px;
 
     cursor: pointer;
@@ -12,12 +25,58 @@ export const GistIcon = styled(FaGithub)`
     }
 `;
 
+export const LinkedinIcone = styled(FaLinkedin)`
+    font-size: 40px;
+
+    cursor: pointer;
+    transition: .2;
+
+    :hover{
+        color: var(--primary);
+    }
+`;
+
+
+
 export const Main = styled.main`
     margin-top: 60px;
 
     display: grid;
     grid-template-columns: 20% 60% 20%;
+
+    > nav {
+        width: auto;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.25);
+
+
+        gap: 10px;
+        padding: 40px;
+        
+
+        > img {
+            height: 110px;
+            width: 110px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 25px;
+        }
+
+        > p{
+                font-size: 18px;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+
+            }
+
+    }
 `;
+
 
 export const FeedContainer = styled.main`
     display: flex;
@@ -27,7 +86,7 @@ export const FeedContainer = styled.main`
     gap: 10px;
     padding: 10px;
 
-    border: 1px dashed gray;
+    border: 1px gray;
 `;
 
 export const Post = styled.article`
@@ -63,6 +122,7 @@ export const Post = styled.article`
     }
 
     > main {
+       
         margin-top: 10px;
         > div {
             > h1 {
