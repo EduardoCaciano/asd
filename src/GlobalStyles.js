@@ -24,14 +24,14 @@ export const GlobalStyles = createGlobalStyle`
         padding: 10px;
         font-weight: bold;
         background-color: transparent;
-        border: 2px solid var(---textPrimary);
-        color: var(---textPrimary);
+        border: 2px solid var(--textPrimary);
+        color: var(--textPrimary);
         cursor: pointer;
         transition: .2;
 
         :hover{
-            border: 2px solid var(---primary);
-            color: var(----primary);
+            border: 2px solid var(--primary);
+            color: var(--primary);
         }
 
         :active{
