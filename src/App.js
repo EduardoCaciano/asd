@@ -1,5 +1,6 @@
 import { GlobalStyles } from "./GlobalStyles";
 import Home from "./pages/Home"
+import Login from "./pages/Login";
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <Home />
+      <Login />
     </>
   );
 }

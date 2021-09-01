@@ -6,7 +6,7 @@ function Header() {
     return (
         <Container>
             <img src={imgLogo} />
-            <input type="text" placeholder="Pesquisar"/>
+            <input type="search" placeholder="Pesquisar"/>
             <div>
                 <IconSignOut />
             </div>

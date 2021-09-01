@@ -6,17 +6,15 @@ import { MdEmail } from "react-icons/md"
 export const GistIcon = styled(FaGithub)`
     font-size: 40px;
     gap: 50px;
-
     cursor: pointer;
     transition: .2;
 
     :hover{
-        color: var(--primary);
+        color: #ff8400;
     }
 `;
 export const EmailIcon = styled(MdEmail)`
     font-size: 40px;
-
     cursor: pointer;
     transition: .2;
 
@@ -27,12 +25,11 @@ export const EmailIcon = styled(MdEmail)`
 
 export const LinkedinIcone = styled(FaLinkedin)`
     font-size: 40px;
-
     cursor: pointer;
     transition: .2;
 
     :hover{
-        color: var(--primary);
+        color: #0f67f5;
     }
 `;
 
@@ -66,13 +63,20 @@ export const Main = styled.main`
             margin-bottom: 25px;
         }
 
-        > p{
+        > p {
                 font-size: 18px;
                 color: black;
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: 600;
 
             }
+        
+        > div {
+            height: 4.5vh;
+            width: 8vw;
+            display: flex;
+            gap: 15px;
+        }    
 
     }
 `;
