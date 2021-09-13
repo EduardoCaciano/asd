@@ -1,31 +1,56 @@
 import Coments from "../../components/Coments";
 import Header from "../../components/Header"
 import { EmailIcon, FeedContainer, GistIcon, LinkedinIcone, Main, MdEmail, Post } from "./styles";
+import { useEffect, useState } from "react";
+import { api } from "../../services/api";
 
 function Home() {
 
-    const posts = [{
-        author: {
-            name: "Albert Einstein",
-        },
-        created_at: "10/10/2021",
-        title: "Este é um post sobre JS.",
-        description: "JS é uma linguagem de programação muito top.",
-        image: "https://voicesinthedark.world/wp-content/uploads/2017/08/sidney-perry-105613-1280x640.jpg",
-        gist: "https://github.com.br/",
-        categories: [
-            "JS", "Back-end", "Express"
-        ],
-        coments: [
-            {
-                author: {
-                    name: "Mona Lisa",
-                },
-                created_at: "11/10/2021",
-                description: "Realmente JS é muito legal."
-            }
-        ]
-    }]
+    const [posts, setPosts] = useState([]);
+
+    const loadPosts = async () => {
+        try {
+            
+            const response = await api.get("/posts");
+
+            setPosts(response.data);
+
+        } catch (error) {
+            console.error(error);
+            alert("Ops, algo deu errado...");
+        }
+    }
+
+    useEffect(() => {
+        loadPosts();
+
+        return () => {
+            // onDestroy
+        }
+    }, []);
+        
+    // const posts = [{
+    //     author: {
+    //         name: "Albert Einstein",
+    //     },
+    //     created_at: "10/10/2021",
+    //     title: "Este é um post sobre JS.",
+    //     description: "JS é uma linguagem de programação muito top.",
+    //     image: "https://voicesinthedark.world/wp-content/uploads/2017/08/sidney-perry-105613-1280x640.jpg",
+    //     gist: "https://github.com.br/",
+    //     categories: [
+    //         "JS", "Back-end", "Express"
+    //     ],
+    //     coments: [
+    //         {
+    //             author: {
+    //                 name: "Mona Lisa",
+    //             },
+    //             created_at: "11/10/2021",
+    //             description: "Realmente JS é muito legal."
+    //         }
+    //     ]
+    // }]
 
     return (
         <>
